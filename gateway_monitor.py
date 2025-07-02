@@ -4,6 +4,7 @@ import datetime
 import smtplib
 from email.mime.text import MIMEText
 
+#log file to write information to
 log_file ="C:\Program Files (x86)\gateway_log.txt"
 
 # Email details
@@ -44,7 +45,7 @@ def send_email(body, subject, sender_email, receiver_email, cc_receiver_email):
     except Exception as e:
         print(f"Error sending email: {e}")
 
-#Gateways
+#Gateways to monitor
 gw1 = "1.1.1.1.1.1"
 gw2 = "2.2.2.2.2.2"
 gw3 = "3.3.3.3.3.3"
@@ -60,7 +61,7 @@ def ping(host):
 def monitor(hosts, interval= 300): #pings every 5 minutes in seconds. 60 x minutes to get seconds.
     """Monitors a list of hosts and prints their status."""
    
-    """Counts how many times gateway has not been pinged successfully"""
+    #Counts how many times the gateway(s) have not been pinged successfully
     gw1_iteration_count = 0
     gw2_iteration_count = 0
     gw3_iteration_count = 0

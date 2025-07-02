@@ -59,6 +59,8 @@ def ping(host):
 
 def monitor(hosts, interval= 300): #pings every 5 minutes in seconds. 60 x minutes to get seconds.
     """Monitors a list of hosts and prints their status."""
+   
+    """Counts how many times gateway has not been pinged successfully"""
     gw1_iteration_count = 0
     gw2_iteration_count = 0
     gw3_iteration_count = 0

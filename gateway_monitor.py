@@ -4,12 +4,12 @@ import datetime
 import smtplib
 from email.mime.text import MIMEText
 
-log_file ="C:\Program Files (x86)\Vigilix\gateway_log.txt"
+log_file ="C:\Program Files (x86)\gateway_log.txt"
 
 # Email details
-sender_email = "jasonwilliams10@protonmail.com" # Use the email address associated with the Bridge token
-receiver_email = "jason.williams@vigilix.com"
-cc_receiver_email = "james.jasinski@vigilix.com"
+sender_email = "your_email@protonmail.com" # Use the email address associated with the Bridge token
+receiver_email = "abc123@example.com"
+cc_receiver_email = "abc123@gmail.com"
 subject = ""
 body = ""
 
@@ -35,7 +35,7 @@ def send_email(body, subject, sender_email, receiver_email, cc_receiver_email):
         # server.starttls()
 
         # Authenticate with the Bridge (using the Bridge's generated password)
-            server.login(sender_email, 'XaZvbexjxhe0sFseUN_ixg') # Replace with the bridge password
+            server.login(sender_email, 'bridge_password') # Replace with the bridge password
 
         # Send the email
             server.sendmail(sender_email, receiver_email, message.as_string())

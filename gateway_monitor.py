@@ -41,10 +41,10 @@ def handle_status(host, name, iteration_count, is_up):
     now = datetime.datetime.now().strftime("%m-%d-%Y %H:%M:%S")
     if is_up:
         if iteration_count > 0:
-            message = f"The {name} is back UP as of {now} and was potentially down for {int(iteration_count / 60)} minutes."
+            message = f"{name} is back UP as of {now} and was potentially down for {int(iteration_count / 60)} minutes."
             print(message)
             log_status(message)
-            send_email(message, f"The {name} is back UP")
+            send_email(message, f"{name} is back UP")
             return 0
         else:
             print(f"{name} is UP at {now}")
@@ -52,7 +52,7 @@ def handle_status(host, name, iteration_count, is_up):
     else:
         iteration_count += 300
         print(f"{name} is DOWN at {now}. Down for {int(iteration_count / 60)} minutes.")
-        log_status(f"The {name} is DOWN.")
+        log_status(f"{name} is DOWN.")
         send_email(f"{name} is DOWN as of {now} and has potentially been down for {int(iteration_count / 60)} minutes.", f"The {name} is DOWN")
         return iteration_count
 

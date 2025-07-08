@@ -53,7 +53,7 @@ def handle_status(host, name, iteration_count, is_up):
         iteration_count += 300
         print(f"{name} is DOWN at {now}. Down for {int(iteration_count / 60)} minutes.")
         log_status(f"{name} is DOWN.")
-        send_email(f"{name} is DOWN as of {now} and has potentially been down for {int(iteration_count / 60)} minutes.", f"The {name} is DOWN")
+        send_email(f"{name} is DOWN as of {now} and has potentially been down for {int(iteration_count / 60)} minutes.", f"{name} is DOWN")
         return iteration_count
 
 def monitor(host_map, interval=300):

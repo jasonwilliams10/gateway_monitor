@@ -4,7 +4,7 @@ import datetime
 import smtplib
 from email.mime.text import MIMEText
 
-log_file = r"C:\Program Files (x86)\Vigilix\gateway_log.txt"
+log_file = r"C:\Program Files (x86)\gateway_log.txt"
 
 # Email details
 sender_email = "youremail@protonmail.com"
@@ -66,14 +66,11 @@ def monitor(host_map, interval=300):
 
 if __name__ == "__main__":
     hosts = {
-        "208.83.78.45": "Greenville Gateway",
-        "208.83.78.46": "Greenville(RC2) Gateway",
-        "52.165.31.120": "Iowa Gateway",
-        "52.88.11.253": "Oregon Gateway",
-        "18.211.25.51": "Virginia Gateway",
-        "3.132.187.169": "Ohio Gateway",
-        "208.87.85.52": "download.vigilix.net",
-        "208.87.85.53": "initialdownload.vigilix.net",
-        "208.83.78.43": "agent.vigilix.net",
+        "1.1.1.1.1.1": "GW1",
+        "2.2.2.2.2.2": "GW2",
+        "3.3.3.3.3.3": "GW3",
+        "4.4.4.4.4.4": "GW4",
+        "5.5.5.5.5.5": "GW5",
+        "6.6.6.6.6.6": "GW6",
     }
     monitor(hosts)

@@ -1,0 +1,21 @@
+{
+    "log_file": "C:\\Program Files (x86)\\Vigilix\\gateway_log.txt",
+    "sender_email": "jasonwilliams10@protonmail.com",
+    "receiver_email": "",
+    "cc_receiver_email": ["", ""],
+
+    "smtp_server": "localhost",
+    "smtp_port": 1025,
+    "hosts": {
+        "rc.vigilix.net": "Greenville Gateway",
+        "rc2.vigilix.net": "Greenville(RC2) Gateway",
+        "rc3.vigilix.net": "Greenville(RC3) Gateway",
+        "rcia.vigilix.net": "Iowa Gateway",
+        "rcor.vigilix.net": "Oregon Gateway",
+        "rcva.vigilix.net": "Virginia Gateway",
+        "rcoh.vigilix.net": "Ohio Gateway",
+        "download.vigilix.net": "Download.Vigilix.Net",
+        "initialdownload.vigilix.net": "Initialdownload.Vigilix.Net",
+        "agent.vigilix.net": "Agent.Vigilix.Net"
+    }
+}
